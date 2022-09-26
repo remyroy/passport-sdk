@@ -12,7 +12,11 @@ module.exports = [{
     libraryTarget: 'var',
   },
   resolve: {
-    extensions: ['.ts', '.js', '.json']
+    extensions: ['.ts', '.js', '.json'],
+    fallback: {
+      'path': false,
+      'fs': false
+    }
   },
   module: {
     rules: [
